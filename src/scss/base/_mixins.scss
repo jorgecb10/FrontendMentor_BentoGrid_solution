@@ -1,0 +1,111 @@
+@use 'variables' as v; 
+
+/** Media Queries **/
+@mixin telefono {
+    @media (min-width: v.$telefono) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (min-width: v.$tablet) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: v.$desktop) {
+        @content;
+    }
+}
+@mixin desktopXL {
+    @media (min-width: v.$desktopXl) {
+        @content;
+    }
+}
+
+
+@mixin boton($bgColor, $colorTexto) {
+    background-color: $bgColor;
+    color: $colorTexto;
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    border-radius: .2rem;
+    transition-property: background-color;
+    transition-duration: .3s;
+    text-align: center;
+
+    @include tablet {
+        width: auto;
+    }
+    &:hover {
+        background-color: darken( $bgColor, 10% );
+    }
+}
+
+@mixin grid($columnas, $espaciado ) {
+    display: grid;
+    gap: $espaciado;
+    grid-template-columns: repeat($columnas, 1fr);
+}
+
+@mixin bgImage($url) {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url($url);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        width: 100%;
+        height: 110%;
+        bottom: 0;
+    }
+
+    m.tablet { 
+        height: unset;
+    }
+}
+
+@mixin enlace {
+    color: v.$negro;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    width: 11rem;
+    font-size: 1.5rem;
+
+    &::after {
+        content: '';
+        background-image: url(../img/flecha.png);
+        background-size: 1.6rem;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 1.6rem;
+        height: 1.6rem;
+        transform: rotate(180deg);
+        margin-left: .5rem;
+        @content;
+    }
+}
+
+@mixin bgPosition {
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@mixin bgContacto($url) {
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url($url);
+        background-size: contain;
+        background-repeat: no-repeat;
+        align-items: center;
+        width: 1.5rem;
+        height: 1.5rem;
+        left: -2.5rem;
+        top: .5rem;
+    }
+}

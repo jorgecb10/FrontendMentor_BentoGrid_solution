@@ -1,0 +1,44 @@
+// Fuentes
+@font-face {
+    font-family: "DM Sans";
+    src: local('DMSans-VariableFont_opsz,wght'),
+        url(DMSans-VariableFont_opsz,wght.ttf),
+        format('ttf');
+}
+@font-face {
+    font-family: "DM Sans-Regular";
+    src: local('DMSans-Regular'),
+        url(../fonts/static/DMSans-Regular.ttf),
+        format('ttf');
+}
+@font-face {
+    font-family: "DM Sans-MediumItalic";
+    src: local('DMSans-MediumItalic'),
+        url(../fonts/static/DMSans-MediumItalic.ttf),
+        format('ttf');
+}
+@font-face {
+    font-family: "DM Sans-Medium";
+    src: local('DMSans-Medium'),
+        url(../fonts/static/DMSans-Medium.ttf),
+        format('ttf');
+}
+
+$fuentePrincipal: 'DM Sans', sans-serif;
+$fuenteRegular: 'DM Sans-Regular', sans-serif;
+$fuenteMedium: 'DM Sans-Medium', sans-serif;
+$fuenteMediumItalic: 'DM Sans-MediumItalic', sans-serif;
+
+// Tamaño de Media Queries
+$telefono: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+$desktopXl: 1200px;
+
+// Colores
+$morado100: hsl(254, 88%, 90%);
+$morado500: hsl(256, 67%, 59%);
+$amarillo100: hsl(31, 66%, 59%);
+$amarillo500: hsl(39, 100%, 71%);
+$negro: #000;
+$blanco: #FFFFFF;

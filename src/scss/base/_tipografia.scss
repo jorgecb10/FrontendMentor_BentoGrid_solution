@@ -1,0 +1,25 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+h1, h2 {
+    margin: 0;
+    line-height: .8;
+    font-weight: 500;
+    font-family: v.$fuenteMedium;
+}
+h1 {
+    font-size: 4.5rem;
+}
+h2 {
+    font-size: 3rem;
+    @include m.tablet { 
+        font-size: 3.3rem;
+    }
+}
+[class$="heading"] {
+    margin: 0 0 2rem 0;
+}
+p {
+    line-height: 1;
+    font-family: v.$fuenteRegular;
+}

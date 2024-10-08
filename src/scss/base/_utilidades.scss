@@ -1,0 +1,9 @@
+@use 'base/variables' as v;
+
+.cl-negro {
+    color: v.$negro;
+}
+
+.cl-blanco {
+    color: v.$blanco;
+}
